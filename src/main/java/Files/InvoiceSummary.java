@@ -8,12 +8,14 @@ import java.util.List;
 import org.apache.commons.csv.CSVRecord;
 
 import Data.ExpenseData;
+import Util.Amount;
 import Util.CSV;
 
-public class BillJob {
+public class InvoiceSummary {
+
 	public static void run() throws IOException {
-		String filename = "BI_JOB.csv";
-		String h = "TENANT_FK	BILLING_SYSTEM_FK	BILLING_FORMAT_FK	PLATFORM_FK	PHASE	STATUS	BILL_NAME	LOAD_BALANCE	LEGACY_JOB_ID	POST_PROCESSING_STATUS";
+		String filename = "InvoiceSummary.csv";
+		String h = "TENANT_FK	CHARGE_PATH	AMOUNT	AMOUNT_IND	INVOICE_HEADER_FK	CHARGE_TYPE_FK	CREATION_DATE	AMOUNT_DATE	CREATED_BY";
 		String[] header = h.split("\\s+");
 
 		// Reader
@@ -33,12 +35,30 @@ public class BillJob {
 				if (ele.equals(record.get("TENANT_FK"))) {
 					temp[i++] = ExpenseData.TENANT;
 					continue;
-				} else if (ele.equals(record.get("BILL_NAME"))) {
-					temp[i++] = ExpenseData.JOB_ID;
+				} else if (ele.equals(record.get("INVOICE_HEADER_FK"))) {
+					temp[i++] = ExpenseData.INVOICE_HEADER_FK;
 					continue;
-				}
-
-				temp[i++] = ele;
+				} else if (ele.equals(record.get("AMOUNT"))) {
+					String[] amount = Amount.get();
+					switch ((int) record.getRecordNumber()) {
+					case 1:
+						temp[i++] = amount[0];
+						break;
+					case 2:
+						temp[i++] = amount[1];
+						break;
+					case 3:
+						temp[i++] = amount[2];
+						break;
+					case 4:
+						temp[i++] = amount[3];
+						break;
+					case 5:
+						temp[i++] = amount[4];
+						break;
+					}
+				} else
+					temp[i++] = ele;
 			}
 			ls.add(temp);
 
@@ -47,4 +67,5 @@ public class BillJob {
 		CSV.write(header, ls, filename);
 
 	}
+
 }

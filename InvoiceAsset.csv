@@ -1,0 +1,3 @@
+"CREATION_DATE","ASSET_IDENTIFIER","ASSET_NAME","ASSET_STATUS","ASSET_SUB_TYPE","ASSET_TYPE_NAME","SERVICE_PROVIDER","INVOICE_ACCOUNT_FK","BILLING_END_DATE","INVOICE_HEADER_FK","TENANT_FK","VENDOR_FK","TENANT_VENDOR_COUNTRY"
+"23,Jun,17","5550007013","5550007013","Active","Smart_Phones","Smart_Phones","CARRIER","MyExpenseAcc_Sep_N7","31,Dec,2017","MyExpenseInv_Sep_N7","LINK_1","NetworkThree1","India"
+"23,Jun,17","Nokia NetworkThree Phone 13","Nokia NetworkThree Phone 13","Active","Smart_Plans","Smart_Plans","CARRIER","MyExpenseAcc_Sep_N7","31,Dec,2017","MyExpenseInv_Sep_N7","LINK_1","NetworkThree1","India"

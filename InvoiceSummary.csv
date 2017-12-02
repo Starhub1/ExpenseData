@@ -1,0 +1,6 @@
+"TENANT_FK","CHARGE_PATH","AMOUNT","AMOUNT_IND","INVOICE_HEADER_FK","CHARGE_TYPE_FK","CREATION_DATE","AMOUNT_DATE","CREATED_BY"
+"LINK_1","/TOP/Current Charges/Subscriber/Usage/Cellular/Overage/MO","40.0","USD","MyExpenseInv_Sep_N7","MOBILE","22,Dec,16","22,Dec,16","doz2.single@tangoe.com"
+"LINK_1","/TOP/Current Charges/Subscriber/Usage/Cellular/Overage/DT","62.333333333333336","USD","MyExpenseInv_Sep_N7","DATA","22,Dec,16","22,Dec,16","doz2.single@tangoe.com"
+"LINK_1","/TOP/Current Charges/Subscriber/Usage/Cellular/Overage/VO","53.833333333333336","USD","MyExpenseInv_Sep_N7","VOICE","22,Dec,16","22,Dec,16","doz2.single@tangoe.com"
+"LINK_1","/TOP/Current Charges/Subscriber/Usage/Cellular/Overage/SM","73.33333333333333","USD","MyExpenseInv_Sep_N7","SMS","22,Dec,16","22,Dec,16","doz2.single@tangoe.com"
+"LINK_1","/TOP/Current Charges/Subscriber/Usage/Cellular/Overage/TX","15.5","USD","MyExpenseInv_Sep_N7","TAX","22,Dec,16","22,Dec,16","doz2.single@tangoe.com"

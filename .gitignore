@@ -2,3 +2,6 @@
 .idea
 Expense.iml
 target
+.classpath
+.project
+.settings
